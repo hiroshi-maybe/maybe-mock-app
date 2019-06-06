@@ -14,6 +14,8 @@
 		8B3BE2E222A97E37000AAE87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3BE2E022A97E37000AAE87 /* LaunchScreen.storyboard */; };
 		8B3BE2ED22A97E37000AAE87 /* maybe_mock_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE2EC22A97E37000AAE87 /* maybe_mock_appTests.swift */; };
 		8B3BE2F822A97E37000AAE87 /* maybe_mock_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE2F722A97E37000AAE87 /* maybe_mock_appUITests.swift */; };
+		8B3BE30822A97F3F000AAE87 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE30722A97F3F000AAE87 /* Layout.swift */; };
+		8B3BE30B22A97F74000AAE87 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE30A22A97F74000AAE87 /* network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8B3BE2F322A97E37000AAE87 /* maybe-mock-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "maybe-mock-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3BE2F722A97E37000AAE87 /* maybe_mock_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maybe_mock_appUITests.swift; sourceTree = "<group>"; };
 		8B3BE2F922A97E37000AAE87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B3BE30722A97F3F000AAE87 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
+		8B3BE30A22A97F74000AAE87 /* network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		8B3BE2D622A97E34000AAE87 /* maybe-mock-app */ = {
 			isa = PBXGroup;
 			children = (
+				8B3BE30622A97F1C000AAE87 /* model */,
+				8B3BE30922A97F59000AAE87 /* lib */,
+				8B3BE30522A97ECE000AAE87 /* main */,
 				8B3BE2D722A97E34000AAE87 /* AppDelegate.swift */,
-				8B3BE2D922A97E34000AAE87 /* ViewController.swift */,
 				8B3BE2DB22A97E34000AAE87 /* Main.storyboard */,
 				8B3BE2DE22A97E37000AAE87 /* Assets.xcassets */,
 				8B3BE2E022A97E37000AAE87 /* LaunchScreen.storyboard */,
@@ -123,6 +129,30 @@
 				8B3BE2F922A97E37000AAE87 /* Info.plist */,
 			);
 			path = "maybe-mock-appUITests";
+			sourceTree = "<group>";
+		};
+		8B3BE30522A97ECE000AAE87 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				8B3BE2D922A97E34000AAE87 /* ViewController.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		8B3BE30622A97F1C000AAE87 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8B3BE30722A97F3F000AAE87 /* Layout.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8B3BE30922A97F59000AAE87 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				8B3BE30A22A97F74000AAE87 /* network.swift */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +288,8 @@
 			files = (
 				8B3BE2DA22A97E34000AAE87 /* ViewController.swift in Sources */,
 				8B3BE2D822A97E34000AAE87 /* AppDelegate.swift in Sources */,
+				8B3BE30B22A97F74000AAE87 /* network.swift in Sources */,
+				8B3BE30822A97F3F000AAE87 /* Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
