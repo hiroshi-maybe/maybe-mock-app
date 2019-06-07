@@ -14,7 +14,7 @@ struct Row: Codable {
   }
   
   let title: String
-  let subtitle: String
+  let subtitle: String?
 }
 
 struct Layout: Codable {

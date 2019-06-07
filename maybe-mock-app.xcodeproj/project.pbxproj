@@ -16,6 +16,7 @@
 		8B3BE2F822A97E37000AAE87 /* maybe_mock_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE2F722A97E37000AAE87 /* maybe_mock_appUITests.swift */; };
 		8B3BE30822A97F3F000AAE87 /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE30722A97F3F000AAE87 /* Layout.swift */; };
 		8B3BE30B22A97F74000AAE87 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE30A22A97F74000AAE87 /* network.swift */; };
+		8B3BE30F22A985FA000AAE87 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE30E22A985FA000AAE87 /* Cells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		8B3BE2F922A97E37000AAE87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B3BE30722A97F3F000AAE87 /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		8B3BE30A22A97F74000AAE87 /* network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
+		8B3BE30E22A985FA000AAE87 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		8B3BE30522A97ECE000AAE87 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				8B3BE30D22A985E6000AAE87 /* view */,
 				8B3BE2D922A97E34000AAE87 /* ViewController.swift */,
 			);
 			path = main;
@@ -153,6 +156,14 @@
 				8B3BE30A22A97F74000AAE87 /* network.swift */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		8B3BE30D22A985E6000AAE87 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8B3BE30E22A985FA000AAE87 /* Cells.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +301,7 @@
 				8B3BE2D822A97E34000AAE87 /* AppDelegate.swift in Sources */,
 				8B3BE30B22A97F74000AAE87 /* network.swift in Sources */,
 				8B3BE30822A97F3F000AAE87 /* Layout.swift in Sources */,
+				8B3BE30F22A985FA000AAE87 /* Cells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
