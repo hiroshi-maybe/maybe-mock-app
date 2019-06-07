@@ -8,8 +8,7 @@
 
 import Foundation
 
-let baseURL = "http://private-94ae0-iosinterviewprep.apiary-mock.com"
-//let baseURL = "http://www.mocky.io/v2/5cf01095300000ce953cd4bd"
+let endpoint = "https://private-1b6238-iosmockapp.apiary-mock.com"
 
 enum HttpMethod: String {
   case get = "GET"
@@ -22,7 +21,7 @@ enum NetworkResponse<Model> {
 }
 
 func makeRequest<Model: Decodable>(path: String, method: HttpMethod, handler: @escaping (NetworkResponse<Model>) -> Void) {
-  let url = URL(string: baseURL + path)!
+  let url = URL(string: endpoint + path)!
   var req = URLRequest(url: url)
   req.httpMethod = method.rawValue
   let dataTask = URLSession.shared.dataTask(with: req) { (data, response, error) in

@@ -32,7 +32,6 @@ class ViewController: UIViewController {
   
   private lazy var tableView: UITableView = {
     let t = UITableView()
-//    t.register(UITableViewCell.self, forCellReuseIdentifier: "detailedcell")
     t.register(BasicTableViewCell.self, forCellReuseIdentifier: BasicTableViewCell.identifier)
     t.register(TwoLinersTableViewCell.self, forCellReuseIdentifier: TwoLinersTableViewCell.identifier)
     t.translatesAutoresizingMaskIntoConstraints = false
