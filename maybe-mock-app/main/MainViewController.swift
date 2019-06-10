@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  maybe-mock-app
 //
 //  Created by Hiroshi Kori on 6/6/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
   
   fileprivate var dataSource: LayoutDataSource? {
     didSet {
@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     let t = UITableView()
     t.register(BasicTableViewCell.self, forCellReuseIdentifier: BasicTableViewCell.identifier)
     t.register(TwoLinersTableViewCell.self, forCellReuseIdentifier: TwoLinersTableViewCell.identifier)
+    t.delegate = self
     t.translatesAutoresizingMaskIntoConstraints = false
     t.refreshControl = self.refreshControl
     t.estimatedRowHeight = 52
@@ -56,9 +57,13 @@ class ViewController: UIViewController {
     self.view.safeAreaLayoutGuide.leftAnchor.constraint(equalTo: tableView.leftAnchor).isActive = true
     self.view.safeAreaLayoutGuide.rightAnchor.constraint(equalTo: tableView.rightAnchor).isActive = true
   }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+  }
 }
 
-extension ViewController {
+extension MainViewController {
   fileprivate func fetch(completed: @escaping () -> Void = {}) {
     makeRequest(path: "/layout", method: .get) { [weak self] (res: NetworkResponse<Layout>) in
       defer { completed() }

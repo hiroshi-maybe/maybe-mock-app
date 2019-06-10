@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8B2A1ACD22AF0FB100E1F27B /* HomeLayoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A1ACC22AF0FB100E1F27B /* HomeLayoutModel.swift */; };
-		8B2A1ACF22AF0FE900E1F27B /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A1ACE22AF0FE900E1F27B /* DataSource.swift */; };
+		8B2A1ACF22AF0FE900E1F27B /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A1ACE22AF0FE900E1F27B /* TableViewDelegate.swift */; };
+		8B2A1AD222AF203100E1F27B /* LayoutCanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A1AD122AF203100E1F27B /* LayoutCanvasViewController.swift */; };
+		8B2A1AD622AF20A700E1F27B /* label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A1AD522AF20A700E1F27B /* label.swift */; };
 		8B3BE2D822A97E34000AAE87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE2D722A97E34000AAE87 /* AppDelegate.swift */; };
-		8B3BE2DA22A97E34000AAE87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE2D922A97E34000AAE87 /* ViewController.swift */; };
+		8B3BE2DA22A97E34000AAE87 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE2D922A97E34000AAE87 /* MainViewController.swift */; };
 		8B3BE2DD22A97E34000AAE87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3BE2DB22A97E34000AAE87 /* Main.storyboard */; };
 		8B3BE2DF22A97E37000AAE87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3BE2DE22A97E37000AAE87 /* Assets.xcassets */; };
 		8B3BE2E222A97E37000AAE87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3BE2E022A97E37000AAE87 /* LaunchScreen.storyboard */; };
@@ -40,10 +42,12 @@
 
 /* Begin PBXFileReference section */
 		8B2A1ACC22AF0FB100E1F27B /* HomeLayoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLayoutModel.swift; sourceTree = "<group>"; };
-		8B2A1ACE22AF0FE900E1F27B /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		8B2A1ACE22AF0FE900E1F27B /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
+		8B2A1AD122AF203100E1F27B /* LayoutCanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutCanvasViewController.swift; sourceTree = "<group>"; };
+		8B2A1AD522AF20A700E1F27B /* label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = label.swift; sourceTree = "<group>"; };
 		8B3BE2D422A97E34000AAE87 /* maybe-mock-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "maybe-mock-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3BE2D722A97E34000AAE87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B3BE2D922A97E34000AAE87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B3BE2D922A97E34000AAE87 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8B3BE2DC22A97E34000AAE87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B3BE2DE22A97E37000AAE87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3BE2E122A97E37000AAE87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,30 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		8B2A1AD022AF200900E1F27B /* LayoutCanvas */ = {
+			isa = PBXGroup;
+			children = (
+				8B2A1AD122AF203100E1F27B /* LayoutCanvasViewController.swift */,
+			);
+			path = LayoutCanvas;
+			sourceTree = "<group>";
+		};
+		8B2A1AD322AF209100E1F27B /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				8B2A1AD422AF209800E1F27B /* view */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		8B2A1AD422AF209800E1F27B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8B2A1AD522AF20A700E1F27B /* label.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		8B3BE2CB22A97E34000AAE87 = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +143,11 @@
 		8B3BE2D622A97E34000AAE87 /* maybe-mock-app */ = {
 			isa = PBXGroup;
 			children = (
+				8B2A1AD322AF209100E1F27B /* utils */,
 				8B3BE30622A97F1C000AAE87 /* model */,
 				8B3BE30922A97F59000AAE87 /* lib */,
 				8B3BE30522A97ECE000AAE87 /* main */,
+				8B2A1AD022AF200900E1F27B /* LayoutCanvas */,
 				8B3BE2D722A97E34000AAE87 /* AppDelegate.swift */,
 				8B3BE2DB22A97E34000AAE87 /* Main.storyboard */,
 				8B3BE2DE22A97E37000AAE87 /* Assets.xcassets */,
@@ -150,7 +180,7 @@
 			children = (
 				8B2A1ACB22AF0F9200E1F27B /* model */,
 				8B3BE30D22A985E6000AAE87 /* view */,
-				8B3BE2D922A97E34000AAE87 /* ViewController.swift */,
+				8B3BE2D922A97E34000AAE87 /* MainViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -175,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				8B3BE30E22A985FA000AAE87 /* Cells.swift */,
-				8B2A1ACE22AF0FE900E1F27B /* DataSource.swift */,
+				8B2A1ACE22AF0FE900E1F27B /* TableViewDelegate.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -311,8 +341,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B2A1ACF22AF0FE900E1F27B /* DataSource.swift in Sources */,
-				8B3BE2DA22A97E34000AAE87 /* ViewController.swift in Sources */,
+				8B2A1AD222AF203100E1F27B /* LayoutCanvasViewController.swift in Sources */,
+				8B2A1ACF22AF0FE900E1F27B /* TableViewDelegate.swift in Sources */,
+				8B3BE2DA22A97E34000AAE87 /* MainViewController.swift in Sources */,
+				8B2A1AD622AF20A700E1F27B /* label.swift in Sources */,
 				8B3BE2D822A97E34000AAE87 /* AppDelegate.swift in Sources */,
 				8B3BE30B22A97F74000AAE87 /* network.swift in Sources */,
 				8B3BE30822A97F3F000AAE87 /* Layout.swift in Sources */,

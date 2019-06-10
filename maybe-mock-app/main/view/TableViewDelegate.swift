@@ -33,3 +33,9 @@ class LayoutDataSource: NSObject, UITableViewDataSource {
     return c
   }
 }
+
+extension MainViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.performSegue(withIdentifier: "showLayoutCanvas", sender: self)
+  }
+}

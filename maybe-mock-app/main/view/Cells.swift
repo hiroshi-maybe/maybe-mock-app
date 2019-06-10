@@ -12,9 +12,6 @@ private let titleFont = UIFont.systemFont(ofSize: 24.0)
 private let subtitleFont = UIFont.systemFont(ofSize: 18.0)
 
 extension UILabel {
-  private func enableAutolayout() {
-    self.translatesAutoresizingMaskIntoConstraints = false
-  }
   fileprivate func configureTitleStyle() -> UILabel {
     self.enableAutolayout()
     self.font = titleFont
