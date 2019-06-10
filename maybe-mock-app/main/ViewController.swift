@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
   }
   
-  fileprivate var model: LayoutModel? {
+  fileprivate var model: HomeLayoutModel? {
     didSet {
       guard let m = model else { return }
       self.navigationItem.title = m.title + " (" + String(m.counter) + ")"
@@ -67,7 +67,7 @@ extension ViewController {
         self?.showAlert(of: err)
       case .success(let layout):
         let c = self?.model?.counter ?? 0
-        self?.model = layout.flatMap { LayoutModel(counter: c + 1, layout: $0) }
+        self?.model = layout.flatMap { HomeLayoutModel(counter: c + 1, layout: $0) }
       }
     }
   }
@@ -84,55 +84,5 @@ extension ViewController {
         self?.refreshControl.endRefreshing()
       }
     }
-  }
-}
-
-struct LayoutModel {
-  let counter: Int
-  let title: String
-  let rows: [Row]
-  
-  enum Row {
-    case oneLiner(title: String)
-    case twoLiners(title: String, subtitle: String)
-    
-    var cellIdentifier: String {
-      switch self {
-      case .oneLiner: return BasicTableViewCell.identifier
-      case .twoLiners: return TwoLinersTableViewCell.identifier
-      }
-    }
-  }
-  
-  init(counter: Int, layout: Layout) {
-    self.counter = counter
-    self.title = layout.title
-    self.rows = layout.rows.map { r in
-      r.subtitle.map { s in Row.twoLiners(title: r.title, subtitle: s) } ?? Row.oneLiner(title: r.title)
-    }
-  }
-}
-
-class LayoutDataSource: NSObject, UITableViewDataSource {
-  let rows: [LayoutModel.Row]
-  
-  init(rows: [LayoutModel.Row]) {
-    self.rows = rows
-  }
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.rows.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let c = tableView.dequeueReusableCell(withIdentifier: self.rows[indexPath.row].cellIdentifier, for: indexPath)
-    switch (self.rows[indexPath.row], c) {
-    case (let .oneLiner(title: title), let c as BasicTableViewCell):
-      c.configure(title: title)
-    case (let .twoLiners(title: title, subtitle: subtitle), let c as TwoLinersTableViewCell):
-      c.configure(title: title, subtitle: subtitle)
-    default: fatalError("Unexpected cell is returned")
-    }
-    return c
   }
 }
