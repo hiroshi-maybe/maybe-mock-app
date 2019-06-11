@@ -6,7 +6,7 @@
 //  Copyright © 2019 Hiroshi Kori. All rights reserved.
 //
 
-struct Row: Codable {
+struct HomeRow: Codable {
   
   enum CodingKeys: String, CodingKey {
     case title
@@ -17,18 +17,18 @@ struct Row: Codable {
   let subtitle: String?
 }
 
-struct Layout: Codable {
+struct HomeLayout: Codable {
   enum CodingKeys: String, CodingKey {
     case title
     case rows
   }
   
   let title: String
-  let rows: [Row]
+  let rows: [HomeRow]
   
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
     self.title = try container.decode(String.self, forKey: .title)
-    self.rows = try container.decode([Row].self, forKey: .rows)
+    self.rows = try container.decode([HomeRow].self, forKey: .rows)
   }
 }

@@ -65,7 +65,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController {
   fileprivate func fetch(completed: @escaping () -> Void = {}) {
-    makeRequest(path: "/layout", method: .get) { [weak self] (res: NetworkResponse<Layout>) in
+    makeRequest(path: "/layout", method: .get) { [weak self] (res: NetworkResponse<HomeLayout>) in
       defer { completed() }
       switch res {
       case .failure(let err):
@@ -75,12 +75,6 @@ extension MainViewController {
         self?.model = layout.flatMap { HomeLayoutModel(counter: c + 1, layout: $0) }
       }
     }
-  }
-  
-  fileprivate func showAlert(of err: Error) {
-    let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "OK", style: .default))
-    self.present(alert, animated: true, completion: nil)
   }
   
   @objc fileprivate func handleRefreshControl() {

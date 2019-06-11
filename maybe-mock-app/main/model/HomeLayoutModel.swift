@@ -23,7 +23,7 @@ struct HomeLayoutModel {
     }
   }
   
-  init(counter: Int, layout: Layout) {
+  init(counter: Int, layout: HomeLayout) {
     self.counter = counter
     self.title = layout.title
     self.rows = layout.rows.map { r in

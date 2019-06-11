@@ -13,13 +13,13 @@ private let subtitleFont = UIFont.systemFont(ofSize: 18.0)
 
 extension UILabel {
   fileprivate func configureTitleStyle() -> UILabel {
-    self.enableAutolayout()
+    self.autolayoutEnabled()
     self.font = titleFont
     self.textColor = UIColor.black
     return self
   }
   fileprivate func configureSubtitleStyle() ->UILabel {
-    self.enableAutolayout()
+    self.autolayoutEnabled()
     self.font = subtitleFont
     self.textColor = UIColor.gray
     return self

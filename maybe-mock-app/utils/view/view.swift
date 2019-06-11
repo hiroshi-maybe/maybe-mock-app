@@ -1,5 +1,5 @@
 //
-//  label.swift
+//  view.swift
 //  maybe-mock-app
 //
 //  Created by Hiroshi Kori on 6/10/19.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-extension UILabel {
-  @discardableResult func enableAutolayout() -> UILabel {
+extension UIView {
+  @discardableResult func autolayoutEnabled() -> Self {
     self.translatesAutoresizingMaskIntoConstraints = false
     return self
   }
 }
+
