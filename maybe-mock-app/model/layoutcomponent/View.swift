@@ -17,18 +17,56 @@ struct DynamicLayout: Decodable {
   
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
-    self.component = (try? container.decode(Label.self, forKey: .component)).map { .label($0) }
+    self.component = try? container.decode(LayoutComponent.self, forKey: .component)
   }
 }
 
-enum LayoutComponent: UIBuilder {
-//  case container(Container)
+struct LayoutComponent: Decodable, UIBuilder {
+  let view: ViewComponent
+  
+  enum CodingKeys: String, CodingKey {
+    case view
+  }
+  
+  init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    self.view = try container.decode(ViewComponent.self, forKey: .view)
+  }
+  
+  func build() -> UIView {
+    return view.build()
+  }
+}
+
+enum ViewComponent: Decodable, UIBuilder {
+  case stack(Stack)
   case label(Label)
+  
+  enum CodingKeys: String, CodingKey {
+    case type
+  }
+  
+  enum ViewType: String, Decodable {
+    case stack, label
+  }
+  
+  init(from decoder: Decoder) throws {
+    let container = try decoder.container(keyedBy: CodingKeys.self)
+    let t = try container.decode(ViewType.self, forKey: .type)
+    switch t {
+    case .label:
+      self = .label(try Label(from: decoder))
+    case .stack:
+      self = .stack(try Stack(from: decoder))
+    }
+  }
   
   func build() -> UIView {
     switch self {
     case .label(let l):
       return l.build()
+    case .stack(let s):
+      return s.build()
     }
   }
 }
