@@ -11,7 +11,12 @@ struct HomeLayoutModel {
   let title: String
   let rows: [Row]
   
-  enum Row {
+  struct Row {
+    let segue: String?
+    let view: View
+  }
+  
+  enum View {
     case oneLiner(title: String)
     case twoLiners(title: String, subtitle: String)
     
@@ -27,7 +32,8 @@ struct HomeLayoutModel {
     self.counter = counter
     self.title = layout.title
     self.rows = layout.rows.map { r in
-      r.subtitle.map { s in Row.twoLiners(title: r.title, subtitle: s) } ?? Row.oneLiner(title: r.title)
+      let v = r.subtitle.map { s in HomeLayoutModel.View.twoLiners(title: r.title, subtitle: s) } ?? HomeLayoutModel.View.oneLiner(title: r.title)
+      return HomeLayoutModel.Row(segue: r.segueId, view: v)
     }
   }
 }

@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     }
   }
   
-  fileprivate var model: HomeLayoutModel? {
+  var model: HomeLayoutModel? {
     didSet {
       guard let m = model else { return }
       self.navigationItem.title = m.title + " (" + String(m.counter) + ")"

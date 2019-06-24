@@ -20,8 +20,8 @@ class LayoutDataSource: NSObject, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let c = tableView.dequeueReusableCell(withIdentifier: self.rows[indexPath.row].cellIdentifier, for: indexPath)
-    switch (self.rows[indexPath.row], c) {
+    let c = tableView.dequeueReusableCell(withIdentifier: self.rows[indexPath.row].view.cellIdentifier, for: indexPath)
+    switch (self.rows[indexPath.row].view, c) {
     case (let .oneLiner(title: title), let c as BasicTableViewCell):
       c.configure(title: title)
     case (let .twoLiners(title: title, subtitle: subtitle), let c as TwoLinersTableViewCell):
@@ -36,6 +36,7 @@ class LayoutDataSource: NSObject, UITableViewDataSource {
 
 extension MainViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    self.performSegue(withIdentifier: "showLayoutCanvas", sender: self)
+    guard let segue = self.model?.rows[indexPath.row].segue else { return }
+    self.performSegue(withIdentifier: segue, sender: self)
   }
 }
