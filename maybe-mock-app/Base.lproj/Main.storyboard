@@ -23,6 +23,7 @@
                     <navigationItem key="navigationItem" id="CaP-5F-Pof"/>
                     <connections>
                         <segue destination="hcZ-we-PQc" kind="show" identifier="showLayoutCanvas" id="Un3-a1-XiI"/>
+                        <segue destination="gem-KC-JaJ" kind="show" identifier="calculator" id="NIq-cP-FqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -43,6 +44,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p10-x8-SmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1867" y="138"/>
+        </scene>
+        <!--Calculator View Controller-->
+        <scene sceneID="892-uJ-KP6">
+            <objects>
+                <viewController id="gem-KC-JaJ" customClass="CalculatorViewController" customModule="maybe_mock_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BIg-Ta-Qmr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dPK-fk-oYv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztc-QY-1Jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1861" y="840"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D8G-WM-nmj">

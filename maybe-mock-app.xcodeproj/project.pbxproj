@@ -16,6 +16,8 @@
 		8B2A1AE322AF2F0000E1F27B /* viewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A1AE222AF2F0000E1F27B /* viewcontroller.swift */; };
 		8B2A1AE522AF33C900E1F27B /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A1AE422AF33C900E1F27B /* view.swift */; };
 		8B2A1AE722B01FF400E1F27B /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A1AE622B01FF400E1F27B /* Stack.swift */; };
+		8B2A1AEA22C18B7800E1F27B /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A1AE922C18B7800E1F27B /* CalculatorViewController.swift */; };
+		8B2A1AED22C18FE400E1F27B /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A1AEC22C18FE400E1F27B /* CalculatorModel.swift */; };
 		8B3BE2D822A97E34000AAE87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE2D722A97E34000AAE87 /* AppDelegate.swift */; };
 		8B3BE2DA22A97E34000AAE87 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BE2D922A97E34000AAE87 /* MainViewController.swift */; };
 		8B3BE2DD22A97E34000AAE87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3BE2DB22A97E34000AAE87 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		8B2A1AE222AF2F0000E1F27B /* viewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewcontroller.swift; sourceTree = "<group>"; };
 		8B2A1AE422AF33C900E1F27B /* view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
 		8B2A1AE622B01FF400E1F27B /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		8B2A1AE922C18B7800E1F27B /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		8B2A1AEC22C18FE400E1F27B /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		8B3BE2D422A97E34000AAE87 /* maybe-mock-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "maybe-mock-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3BE2D722A97E34000AAE87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B3BE2D922A97E34000AAE87 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,23 @@
 			path = layoutcomponent;
 			sourceTree = "<group>";
 		};
+		8B2A1AE822C18ADB00E1F27B /* calculator */ = {
+			isa = PBXGroup;
+			children = (
+				8B2A1AEB22C18FD700E1F27B /* model */,
+				8B2A1AE922C18B7800E1F27B /* CalculatorViewController.swift */,
+			);
+			path = calculator;
+			sourceTree = "<group>";
+		};
+		8B2A1AEB22C18FD700E1F27B /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8B2A1AEC22C18FE400E1F27B /* CalculatorModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		8B3BE2CB22A97E34000AAE87 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +188,7 @@
 				8B3BE30922A97F59000AAE87 /* lib */,
 				8B3BE30522A97ECE000AAE87 /* main */,
 				8B2A1AD022AF200900E1F27B /* LayoutCanvas */,
+				8B2A1AE822C18ADB00E1F27B /* calculator */,
 				8B3BE2D722A97E34000AAE87 /* AppDelegate.swift */,
 				8B3BE2DB22A97E34000AAE87 /* Main.storyboard */,
 				8B3BE2DE22A97E37000AAE87 /* Assets.xcassets */,
@@ -367,12 +389,14 @@
 				8B2A1ACF22AF0FE900E1F27B /* TableViewDelegate.swift in Sources */,
 				8B2A1AE122AF2B9000E1F27B /* Label.swift in Sources */,
 				8B3BE2DA22A97E34000AAE87 /* MainViewController.swift in Sources */,
+				8B2A1AED22C18FE400E1F27B /* CalculatorModel.swift in Sources */,
 				8B3BE2D822A97E34000AAE87 /* AppDelegate.swift in Sources */,
 				8B3BE30B22A97F74000AAE87 /* network.swift in Sources */,
 				8B2A1AE522AF33C900E1F27B /* view.swift in Sources */,
 				8B2A1ADF22AF2B2300E1F27B /* HomeLayout.swift in Sources */,
 				8B3BE30F22A985FA000AAE87 /* Cells.swift in Sources */,
 				8B2A1ADD22AF29BD00E1F27B /* View.swift in Sources */,
+				8B2A1AEA22C18B7800E1F27B /* CalculatorViewController.swift in Sources */,
 				8B2A1ACD22AF0FB100E1F27B /* HomeLayoutModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
